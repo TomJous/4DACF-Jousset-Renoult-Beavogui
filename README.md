@@ -20,6 +20,5 @@ Il existe trois dossiers dans ce projet qui répartissent le travail :
 - apache_nifi : là où on trouve le flux de données et la capture d'écran de ce schéma
 - dashboard : le rapport Power BI analysant les données préparées
 
-Dans cachun de ces dossiers, il existe une documentation qui exprime la réflexion des trois collaborateurs sur leur part de travail.
-Bonne consultation de ce projet.
+
 

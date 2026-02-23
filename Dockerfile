@@ -15,8 +15,7 @@ RUN venv/bin/pip install --no-cache-dir \
     faker
 
 RUN mkdir -p /scripts && \
-    chown -R nifi:nifi /opt/nifi && \
-    chown -R nifi:nifi /scripts && \
+    chown -R nifi:nifi /opt/nifi /scripts && \
     chmod +x /opt/nifi/nifi-current/venv/bin/python
 
 USER nifi

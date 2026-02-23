@@ -17,5 +17,5 @@ services:
       - ./nifi/state:/opt/nifi/nifi-current/state
       - ./nifi/logs:/opt/nifi/nifi-current/logs
       - ./data:/data
-      - ./script_python:/scripts # pour les scripts Python
+      - ./script_python:/scripts
     restart: unless-stopped

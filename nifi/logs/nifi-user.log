@@ -1,0 +1,8 @@
+2026-02-23 19:17:04,574 INFO [main] o.a.n.a.FileUserGroupProvider Creating new users file at /opt/nifi/nifi-current/./conf/users.xml
+2026-02-23 19:17:04,781 INFO [main] o.a.n.a.FileAccessPolicyProvider Creating new authorizations file at /opt/nifi/nifi-current/./conf/authorizations.xml
+2026-02-23 19:17:04,822 INFO [main] o.a.n.a.single.user.SingleUserAuthorizer Initializing Authorizer
+2026-02-23 19:17:04,840 INFO [main] o.a.n.a.single.user.SingleUserAuthorizer Configuring Authorizer
+2026-02-23 19:17:28,127 INFO [main] o.a.n.w.s.c.KeyPairGeneratorConfiguration Configured Key Pair Algorithm [Ed25519] for JSON Web Signatures
+2026-02-23 19:19:08,725 INFO [main] o.a.n.a.single.user.SingleUserAuthorizer Initializing Authorizer
+2026-02-23 19:19:08,749 INFO [main] o.a.n.a.single.user.SingleUserAuthorizer Configuring Authorizer
+2026-02-23 19:19:20,122 INFO [main] o.a.n.w.s.c.KeyPairGeneratorConfiguration Configured Key Pair Algorithm [Ed25519] for JSON Web Signatures
