@@ -1,0 +1,3 @@
+2026-02-23 14:32:03,312 WARN [main] o.a.n.b.c.GetRunCommandBootstrapCommand Invalid host [] configured for [nifi.web.proxy.host] in nifi.properties
+2026-02-23 14:32:03,941 INFO [main] o.a.n.b.c.GetRunCommandBootstrapCommand Generated Self-Signed Certificate Expiration: 2026-04-24
+2026-02-23 14:32:03,942 INFO [main] o.a.n.b.c.GetRunCommandBootstrapCommand Generated Self-Signed Certificate SHA-256: 92CC32646DDEAEC6C04A94F6C38D3AE55356A13A1D5D5F1E4AE640EA529DFA16

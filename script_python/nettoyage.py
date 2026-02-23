@@ -49,4 +49,4 @@ df_filtrage_nb_montant["Fidélité"] = pd.cut(df_filtrage_nb_montant["ScoreFidé
 
 # Renvoyer le CSV modifié
 #df_filtrage_nb_montant.to_csv("../data/prepared_data.csv", index=False, header=True, sep=",")
-print(df_filtrage_benefice.to_csv(index=False, header=True, sep=","))
+print(df_filtrage_nb_montant.to_csv(index=False, header=True, sep=","))
