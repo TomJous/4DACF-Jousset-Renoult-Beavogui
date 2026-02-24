@@ -37,7 +37,15 @@ Maintenant que vous avez respecté les pré-requis, il faut lancer *Docker Deskt
 ./setup_nifi.sh
 ```
 
-Cela lancera le script bash qui va télécharger l'image nifi, créer les volumes et installer Python et ses librairies (*pandas, faker*). Après qu'il aura tout initialisé, il lancera le conteneur une première fois afin de configurer tout le reste de l'application nifi. À la fin de la première initialisation, le script va ajouter le template du fluw créé qui se trouve dans le dossier *./nifi/mon_flow/flow.json.gz*. Pour finir, il relancera le conteneur afin de prendre ces modifications en compte et le lancer. Attendez-vous à ce que cela dure un peu de temps notamment à cause du téléchargament de l'image liée à nifi. 
+Cela lancera le script bash qui va télécharger l'image nifi, créer les volumes et installer Python et ses librairies (*pandas, faker*). Après qu'il aura tout initialisé, il lancera le conteneur une première fois afin de configurer tout le reste de l'application nifi. À la fin de la première initialisation, le script va ajouter le template du fluw créé qui se trouve dans le dossier *./nifi/mon_flow/flow.json.gz*. Pour finir, il relancera le conteneur afin de prendre ces modifications en compte et le lancer. Attendez-vous à ce que cela dure un peu de temps notamment à cause du téléchargament de l'image liée à nifi. À la fin du script bash, vous devriez avoir ce petit message :
+
+```bash
+
+✅ NiFi has fully started! You can open now the app on the https://localhost:8443/nifi/#/login
+
+```
+
+Pour se connecter, l'identifiant et le mot de passe sont dans le docker compose nommés **SINGLE_USER_CREDENTIALS_USERNAME** et **SINGLE_USER_CREDENTIALS_PASSWORD**. Si le navigateur vous mets un avertissement de sécurité quand vous ouvrez l'onglet, cela est normal. Vous pouvez poursuivre la navigation en demandant aux navigateur de continuer.
 
 Pour ce qui est du flux créé, c'est un flux simple qui contient 5 processeurs. Un premier processeur va aller chercher les données du CSV (**dataset_projet_evaluation.csv**) dans le dossier *./data*. Le deuxième et troisième processeur vont exécuter les deux scripts pythons qui sont dans le dossier *./script_python* (*anonymisation.py, nettoyage.py*). L'avant dernier processeur va renomer le fichier CSV de sortie en ajoutant le préfixe *prepared* et pour finir le dernier processeur va exporter le fichier CSV anonymisé et préparé dans le dossier *./data*. 
 
