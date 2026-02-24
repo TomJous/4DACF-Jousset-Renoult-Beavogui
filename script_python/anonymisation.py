@@ -1,4 +1,10 @@
-# Script final pour l'anonimysation
+#####################################-
+# Sujet : anonymisation des données dans le cadre du RGPD
+# Auteurs : Julien RENOULT - Tom JOUSSET - Béatrice BEAVOGUI
+# Date : 23/02/2026
+#####################################-
+
+# Script final pour l'anonymisation
 import pandas as pd
 from faker import Factory
 from io import StringIO

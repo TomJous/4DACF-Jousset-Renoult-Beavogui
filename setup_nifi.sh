@@ -11,7 +11,7 @@ echo "Building and starting containers..."
 docker compose up --build -d
 
 # --- Step 3: Waiting that the app is started ---
-echo "Step 3: Waiting for NiFi to fully start..."
+echo "Waiting for NiFi to fully start..."
 # follow the logs to get the app started
 docker logs -f $CONTAINER_NAME | while read LINE; do
     echo "$LINE"
@@ -42,4 +42,16 @@ docker exec -u root $CONTAINER_NAME bash -c "chown -R nifi:nifi /opt/nifi/nifi-c
 echo "Restarting NiFi container..."
 docker restart $CONTAINER_NAME
 
-echo "✅ NiFi container is up with flow.json.gz loaded!"
+echo "NiFi container is up with flow.json.gz loaded!"
+
+# --- Step 7: indicates to the user when we can open the app ---
+echo "Waiting for NiFi to fully start..."
+# follow the logs to get the app started
+docker logs -f $CONTAINER_NAME | while read LINE; do
+    echo "$LINE"
+    if [[ "$LINE" == *"org.apache.nifi.runtime.Application Started Application"* ]]; then
+        echo "✅ NiFi has fully started! You can open now the app on the https://localhost:8443/nifi/#/login"
+        pkill -P $$ tail   # Stop the following
+        break
+    fi
+done
